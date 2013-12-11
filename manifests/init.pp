@@ -1,7 +1,7 @@
 class { 'homebrew':
   user => 'dgobhai',
 }
-package { 'postgresql':
+package { 'tree':
   ensure   => installed,
   provider => brew,
 }
