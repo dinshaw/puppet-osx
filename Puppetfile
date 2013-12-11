@@ -1,0 +1,3 @@
+forge "http://forge.puppetlabs.com"
+mod "java", git: "git@github.com:puppetlabs/puppetlabs-java.git"
+
