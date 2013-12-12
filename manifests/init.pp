@@ -11,7 +11,7 @@ package { 'tree':
 # rbenv::compile { '2.0.0-p247': }
 
 dotfiles {'dgobhai':
-    gituser      => 'boinger',
+    gituser      => 'dinshaw',
     giturl       => 'git://github.com',
     project      => 'dotfiles',
     dotfiles_dir => 'home',
