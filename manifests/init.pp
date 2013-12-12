@@ -16,10 +16,10 @@ dotfiles {'dgobhai':
     project      => 'dotfiles',
     dotfiles_dir => 'home',
     branch       => 'master',
-    homedir      => "/home/${name}"
+    homedir      => "/home/${name}",
     clobber      => true,
     bak_ext      => '.bak',
     single_pull  => false,
     rebase       => true,
-    frequency    => 30;
+    frequency    => 30,
 }
