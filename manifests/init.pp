@@ -7,7 +7,7 @@ package { 'tree':
   require  => Class['homebrew']
 }
 
-rbenv::install { 'someuser': }
+rbenv::install { 'dgobhai': }
 rbenv::compile { '2.0.0-p247': }
 
 dotfiles { 'dinshaw':
