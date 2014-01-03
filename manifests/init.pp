@@ -14,10 +14,25 @@ package { "googlechrome":
     source => "https://dl-ssl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg",
     provider => pkgdmg
   }
-package { "Sublime Text Build 3059":
-    source => "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg",
-    provider => pkgdmg
+
+define pkg_deploy($sourcedir = false)
+  {
+  $sourcedir_real = $sourcedir ? {
+    false => "http://puppet.reductivelabs.foo/osx/pkgs/apps",
+    default => $sourcedir
   }
+  package { $name:
+    ensure => installed,
+    provider => pkgdmg,
+    source => "$sourcedir_real/$name"
+  }
+}
+
+
+pkg_deploy { "Sublime Text Build 3059.dmg":
+  alias => sublimetext3,
+  sourcedir => "http://c758482.r82.cf2.rackcdn.com/"
+}
 
 exec { 'dotfiles':
   creates => '/Users/dgobhai/.dotfiles',
