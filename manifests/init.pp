@@ -15,16 +15,12 @@ package { "googlechrome":
     provider => pkgdmg
   }
 
-define pkg_deploy($sourcedir = false)
+define pkg_deploy($sourcedir)
   {
-  $sourcedir_real = $sourcedir ? {
-    false => "http://puppet.reductivelabs.foo/osx/pkgs/apps",
-    default => $sourcedir
-  }
   package { $name:
     ensure => installed,
     provider => pkgdmg,
-    source => "$sourcedir_real/$name"
+    source => "$sourcedir/$name"
   }
 }
 
