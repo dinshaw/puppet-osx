@@ -1,9 +1,8 @@
 class { 'homebrew':
   user => 'dgobhai',
 }
-package { 'tree':
-  ensure   => present,
-  provider => brew,
+exec { 'tree':
+  command   => '/usr/local/bin/brew install tree',
   require  => Class['homebrew']
 }
 
