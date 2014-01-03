@@ -8,7 +8,9 @@ package { 'gtypist':
 }
 
 rbenv::install { 'dgobhai':
+  user => 'dgobhai',
   home => '/Users',
+  root => '/Users/dgobhai/.rbenv',
 }
 
 rbenv::compile { '2.0.0-p247':
