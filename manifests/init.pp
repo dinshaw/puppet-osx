@@ -27,7 +27,7 @@ define pkg_deploy($sourcedir)
 
 pkg_deploy { "Sublime Text Build 3059.dmg":
   alias => sublimetext3,
-  sourcedir => "http://c758482.r82.cf2.rackcdn.com/"
+  sourcedir => "http://c758482.r82.cf2.rackcdn.com"
 }
 
 exec { 'dotfiles':
