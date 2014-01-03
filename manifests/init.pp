@@ -10,8 +10,8 @@ package { 'gtypist':
 # rbenv::install { 'dgobhai': }
 # rbenv::compile { '2.0.0-p247': }
 
-package { "caffeine":
-    source => "http://download.lightheadsw.com/download.php?software=caffeine",
+package { "googlechrome":
+    source => "https://dl-ssl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg",
     provider => macapp
   }
 
