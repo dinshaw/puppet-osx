@@ -12,18 +12,18 @@ package { 'gtypist':
 }
 
 package { 'rbenv':
-  ensure   => present,
+  ensure   => installed,
   provider => brew,
   require  => Class['homebrew']
 } ->
 package { 'rubybuild':
-  ensure   => present,
+  ensure   => installed,
   provider => brew,
   require  => Class['homebrew']
-} ->
-exec { '2.0.0-p247':
-  command => 'rbenv install 2.0.0-p247',
-}
+} #->
+# exec { '2.0.0-p247':
+#   command => 'rbenv install 2.0.0-p247',
+# }
 
 package { "googlechrome":
     source => "https://dl-ssl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg",
