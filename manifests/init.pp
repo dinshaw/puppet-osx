@@ -12,7 +12,7 @@ package { 'gtypist':
 
 package { "googlechrome":
     source => "https://dl-ssl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg",
-    provider => macapp
+    provider => pkgdmg
   }
 
 exec { 'dotfiles':
