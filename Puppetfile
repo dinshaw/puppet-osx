@@ -1,4 +1,4 @@
 forge "http://forge.puppetlabs.com"
-mod "homebrew", :git => "git@github.com:bjoernalbers/puppet-homebrew.github"
+mod "homebrew", :git => "https://github.com/bjoernalbers/puppet-homebrew.git"
 mod "rbenv", :git => "https://github.com/alup/puppet-rbenv.git"
 
