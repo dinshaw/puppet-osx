@@ -12,5 +12,5 @@ package { 'gtypist':
 
 exec { 'dotfiles':
   creates => '/Users/dgobhai/.dotfiles',
-  command => '/usr/bin/git clone https://github.com/dinshaw/dotfiles.git /home/dgobhai/.dotfiles && cd /home/dgobhai/.dotfiles && ./rake',
+  command => '/usr/bin/git clone https://github.com/dinshaw/dotfiles.git /Users/dgobhai/.dotfiles && cd /Users/dgobhai/.dotfiles && ./rake',
 }
