@@ -12,5 +12,5 @@ package { 'tree':
 
 exec { 'dotfiles':
   creates => '/home/dgobhai/.dotfiles',
-  command => '/usr/bin/git clone https://github.com/dinshaw/dotfiles.git /home/vagrant/.dotfiles && cd /home/vagrant/.dotfiles && ./rake',
+  command => '/usr/bin/git clone https://github.com/dinshaw/dotfiles.git /home/dgobhai/.dotfiles && cd /home/dgobhai/.dotfiles && ./rake',
 }
