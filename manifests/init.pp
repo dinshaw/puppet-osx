@@ -1,29 +1,29 @@
 class { 'homebrew':
   user => 'dgobhai',
-} ->
-exec { 'brew update':
-  command => '/usr/local/bin/brew update',
 }
 
 package { 'gtypist':
   ensure   => present,
   provider => brew,
-  require  => Class['homebrew']
+  require  => Class['homebrew'],
+  user => 'dgobhai',
 }
 
 package { 'rbenv':
   ensure   => installed,
   provider => brew,
   require  => Class['homebrew']
+  user => 'dgobhai',
 } ->
 package { 'ruby-build':
   ensure   => installed,
   provider => brew,
   require  => Class['homebrew']
-} ->
-exec { '2.0.0-p247':
-  command => '/usr/local/bin/rbenv install 2.0.0-p247',
+  user => 'dgobhai',
 }
+# exec { '2.0.0-p247':
+#   command => '/usr/local/bin/rbenv install 2.0.0-p247',
+# }
 
 package { "googlechrome":
     source => "https://dl-ssl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg",
@@ -31,11 +31,11 @@ package { "googlechrome":
   }
 
 
-  package { 'Sublime Text':
-    ensure => installed,
-    provider => pkgdmg,
-    source => "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg",
-  }
+package { 'Sublime Text':
+  ensure => installed,
+  provider => pkgdmg,
+  source => "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg",
+}
 
 
 exec { 'dotfiles':
