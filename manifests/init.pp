@@ -12,13 +12,13 @@ package { 'gtypist':
 package { 'rbenv':
   ensure   => installed,
   provider => brew,
-  require  => Class['homebrew']
+  require  => Class['homebrew'],
   user => 'dgobhai',
 } ->
 package { 'ruby-build':
   ensure   => installed,
   provider => brew,
-  require  => Class['homebrew']
+  require  => Class['homebrew'],
   user => 'dgobhai',
 }
 # exec { '2.0.0-p247':
