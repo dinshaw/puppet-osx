@@ -10,10 +10,10 @@ package { 'gtypist':
 # rbenv::install { 'dgobhai': }
 # rbenv::compile { '2.0.0-p247': }
 
-package { 'sublimeText3':
+package { 'Sublime%20Text%20Build%203059.dmg':
     ensure => installed,
     provider => pkgdmg,
-    source => "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg"
+    source => "http://c758482.r82.cf2.rackcdn.com/"
 }
 
 exec { 'dotfiles':
