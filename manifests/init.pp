@@ -7,7 +7,10 @@ package { 'gtypist':
   require  => Class['homebrew']
 }
 
-rbenv::install { 'dgobhai': }
+rbenv::install { 'dgobhai':
+  home => '/Users',
+}
+
 rbenv::compile { '2.0.0-p247':
   user => 'dgobhai',
   home => '/Users',
