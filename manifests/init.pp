@@ -16,7 +16,7 @@ package { 'rbenv':
   provider => brew,
   require  => Class['homebrew']
 } ->
-package { 'rubybuild':
+package { 'ruby-build':
   ensure   => installed,
   provider => brew,
   require  => Class['homebrew']
