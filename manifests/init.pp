@@ -1,6 +1,10 @@
 class { 'homebrew':
   user => 'dgobhai',
+} ->
+exuec { 'brew update':
+  command => '/usr/local/bin/brew update',
 }
+
 package { 'gtypist':
   ensure   => present,
   provider => brew,
@@ -17,10 +21,8 @@ package { 'rubybuild':
   provider => brew,
   require  => Class['homebrew']
 } ->
-rbenv::compile { '2.0.0-p247':
-  user => 'dgobhai',
-  home => '/Users',
-  global => true,
+exec { '2.0.0-p247':
+  command => 'rbenv install 2.0.0-p247',
 }
 
 package { "googlechrome":
