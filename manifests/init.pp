@@ -1,8 +1,9 @@
 class { 'homebrew':
   user => 'dgobhai',
 }
-exec { 'tree':
-  command   => '/usr/local/bin/brew install tree',
+package { 'gtypist':
+  ensure   => present,
+  provider => brew,
   require  => Class['homebrew']
 }
 

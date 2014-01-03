@@ -1,18 +1,10 @@
 GIT
-  remote: git@github.com:boinger/puppet-dotfiles.git
+  remote: git@github.com:bjoernalbers/puppet-homebrew.git
   ref: master
-  sha: 86d1077305b9591c6b51eafd69ad3bb285e89d77
+  sha: f0dc376bc203f4aee89715d60d2671e882e03f7a
   specs:
-    dotfiles (0.0.1)
-
-GIT
-  remote: git@github.com:kelseyhightower/puppet-homebrew.git
-  ref: master
-  sha: 118e32a4dd7e4c7284aee474397c9a65739ceff6
-  specs:
-    homebrew (0.0.1)
+    homebrew (0.2.0)
 
 DEPENDENCIES
-  dotfiles (>= 0)
   homebrew (>= 0)
 
