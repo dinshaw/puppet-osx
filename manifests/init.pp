@@ -7,17 +7,20 @@ package { 'gtypist':
   require  => Class['homebrew']
 }
 
-rbenv::install { 'dgobhai':
-  user => 'dgobhai',
-  home => '/Users',
-  root => '/Users/dgobhai/.rbenv',
-}
-
+package { 'rbenv':
+  ensure   => present,
+  provider => brew,
+  require  => Class['homebrew']
+} ->
+package { 'rubybuild':
+  ensure   => present,
+  provider => brew,
+  require  => Class['homebrew']
+} ->
 rbenv::compile { '2.0.0-p247':
   user => 'dgobhai',
   home => '/Users',
   global => true,
-
 }
 
 package { "googlechrome":
