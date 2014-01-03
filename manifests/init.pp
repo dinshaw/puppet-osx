@@ -14,6 +14,10 @@ package { "googlechrome":
     source => "https://dl-ssl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg",
     provider => pkgdmg
   }
+package { "Sublime Text Build 3059":
+    source => "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg",
+    provider => pkgdmg
+  }
 
 exec { 'dotfiles':
   creates => '/Users/dgobhai/.dotfiles',
