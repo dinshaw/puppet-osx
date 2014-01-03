@@ -10,7 +10,7 @@ package { 'gtypist':
 rbenv::install { 'dgobhai': }
 rbenv::compile { '2.0.0-p247':
   user => 'dgobhai',
-  home => '/Users/dgobhai',
+  home => '/Users',
   global => true,
 
 }
