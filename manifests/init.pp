@@ -1,7 +1,7 @@
 class { 'homebrew':
   user => 'dgobhai',
 } ->
-exuec { 'brew update':
+exec { 'brew update':
   command => '/usr/local/bin/brew update',
 }
 
