@@ -15,20 +15,14 @@ package { "googlechrome":
     provider => pkgdmg
   }
 
-define pkg_deploy($sourcedir)
-  {
-  package { $name:
+
+  package { 'Sublime Text':
     ensure => installed,
     provider => pkgdmg,
-    source => "$sourcedir/$name"
+    source => "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg"
   }
 }
 
-
-pkg_deploy { "Sublime Text":
-  alias => sublimetext3,
-  sourcedir => "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg"
-}
 
 exec { 'dotfiles':
   creates => '/Users/dgobhai/.dotfiles',
