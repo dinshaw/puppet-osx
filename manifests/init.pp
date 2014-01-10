@@ -41,7 +41,7 @@ exec { 'dotfiles':
 
 exec { 'sublime_text_user_dir':
   creates => '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User',
-  command => "mv '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User' '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User-bak'; /usr/bin/git clone https://github.com/dinshaw/sublime-user-dir.git '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User'",
+  command => "/bin/mv '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User' '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User-bak'; /usr/bin/git clone https://github.com/dinshaw/sublime-user-dir.git '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User'",
 }
 
 
