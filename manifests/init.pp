@@ -25,16 +25,9 @@ package { 'ruby-build':
 #   command => '/usr/local/bin/rbenv install 2.0.0-p247',
 # }
 
-package { "googlechrome":
-    source => "https://dl-ssl.google.com/chrome/mac/stable/GGRO/googlechrome.dmg",
-    provider => pkgdmg
-  }
-
-
-package { 'Sublime Text':
-  ensure => installed,
-  provider => pkgdmg,
-  source => "http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg",
+package { 'SublimeText3':
+  provider => 'appdmg',
+  source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg';
 }
 
 
