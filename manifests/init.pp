@@ -6,7 +6,6 @@ package { 'gtypist':
   ensure   => present,
   provider => brew,
   require  => Class['homebrew'],
-  user => 'dgobhai',
 }
 
 package { 'rbenv':
