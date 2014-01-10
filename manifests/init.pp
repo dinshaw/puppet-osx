@@ -31,7 +31,6 @@ file { '/usr/local/bin/subl':
     target  => '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl',
     mode    => '0755',
     require => Package['SublimeText3'],
-  }
 }
 
 
