@@ -49,9 +49,8 @@ exec { 'sublime_text_user_dir':
   command => "/usr/bin/git clone https://github.com/dinshaw/sublime-user-dir.git '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User'",
 }
 
-Osx_defaults {
-    user => 'dgobhai',
-  }
+include osx_defaults
+
 osx_defaults { 'Put my Dock on the left':
     key    => 'orientation',
     domain => 'com.apple.dock',
