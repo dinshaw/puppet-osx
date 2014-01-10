@@ -57,7 +57,7 @@ osx_defaults { 'Put my Dock where i want it':
 osx_defaults { 'Show no crap in the dock':
   key    => 'static-only',
   domain => 'com.apple.dock',
-  value  => '-bool FALSE',
+  value  => '-bool TRUE',
   user => 'dgobhai',
 } ->
 exec { 'refresh dock':
