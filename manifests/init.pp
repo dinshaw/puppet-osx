@@ -39,7 +39,7 @@ exec { 'dotfiles':
 }
 
 exec { 'move_sublime_user_dir':
-  command => "/bin/mv '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User' '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User-bak'"
+  command => "/bin/mv '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User' '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User-bak'",
   user => root,
 } ->
 exec { 'sublime_text_user_dir':
