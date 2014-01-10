@@ -12,13 +12,11 @@ package { 'rbenv':
   ensure   => installed,
   provider => brew,
   require  => Class['homebrew'],
-  user => 'dgobhai',
 } ->
 package { 'ruby-build':
   ensure   => installed,
   provider => brew,
   require  => Class['homebrew'],
-  user => 'dgobhai',
 }
 # exec { '2.0.0-p247':
 #   command => '/usr/local/bin/rbenv install 2.0.0-p247',
