@@ -41,11 +41,18 @@ exec { 'dotfiles':
 exec { 'move_sublime_user_dir':
   creates => '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User-bak',
   command => "/bin/mv '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User' '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User-bak'",
+  mode    => '0755',
   user => root,
 } ->
 exec { 'sublime_text_user_dir':
   creates => '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User',
   command => "/usr/bin/git clone https://github.com/dinshaw/sublime-user-dir.git '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User'",
 }
+
+osx_defaults { 'Put my Dock on the left':
+    key    => 'orientation',
+    domain => 'com.apple.dock',
+    value  => 'left',
+  }
 
 
