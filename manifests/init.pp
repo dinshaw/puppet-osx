@@ -29,7 +29,7 @@ package { 'SublimeText3':
 file { '/usr/local/bin/subl':
     ensure  => link,
     target  => '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl',
-    mode    => '0755',
+    # mode    => '0755',
     require => Package['SublimeText3'],
 }
 
