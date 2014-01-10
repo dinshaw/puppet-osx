@@ -54,6 +54,12 @@ osx_defaults { 'Put my Dock where i want it':
   value  => 'left',
   user => 'dgobhai',
 } ->
+osx_defaults { 'Show no crap in the dock':
+  key    => 'static-only',
+  domain => 'com.apple.dock',
+  value  => '-bool FALSE',
+  user => 'dgobhai',
+} ->
 exec { 'refresh dock':
   command => '/usr/bin/killall Dock'
 }
