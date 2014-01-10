@@ -29,7 +29,7 @@ package { 'SublimeText3':
 file { '/usr/local/bin/subl':
     ensure  => link,
     target  => '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl',
-    # mode    => '0755',
+    mode    => '0755',
     require => Package['SublimeText3'],
 }
 
@@ -41,7 +41,7 @@ exec { 'dotfiles':
 exec { 'move_sublime_user_dir':
   creates => '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User-bak',
   command => "/bin/mv '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User' '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User-bak'",
-  mode    => '0755',
+  # mode    => '0755',
   user => root,
 } ->
 exec { 'sublime_text_user_dir':
