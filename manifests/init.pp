@@ -45,7 +45,7 @@ exec { 'move_sublime_user_dir':
 } ->
 exec { 'sublime_text_user_dir':
   creates => '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User',
-  command => "/usr/bin/git clone https://github.com/dgobhai/sublime-user-dir.git '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User'",
+  command => "/usr/bin/git clone https://github.com/dinshaw/sublime-user-dir.git '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User'",
 }
 
 
