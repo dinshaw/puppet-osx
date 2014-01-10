@@ -52,7 +52,7 @@ include osx_defaults
 osx_defaults { 'Put my Dock on the left':
     key    => 'orientation',
     domain => 'com.apple.dock',
-    value  => 'left',
+    value  => 'right',
   }
 
 
