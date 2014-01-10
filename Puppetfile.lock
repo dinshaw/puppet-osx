@@ -1,10 +1,26 @@
 GIT
-  remote: git@github.com:bjoernalbers/puppet-homebrew.git
+  remote: https://github.com/alup/puppet-rbenv.git
+  ref: master
+  sha: baf789ece015e14e61785446dd0a3e4cf9503583
+  specs:
+    rbenv (1.2.0)
+
+GIT
+  remote: https://github.com/bjoernalbers/puppet-homebrew.git
   ref: master
   sha: f0dc376bc203f4aee89715d60d2671e882e03f7a
   specs:
     homebrew (0.2.0)
 
+GIT
+  remote: https://github.com/wfarr/puppet-osx_defaults.git
+  ref: master
+  sha: ff5e33742ce39c3f1b5d185cdd4f9d1bbd50f4a6
+  specs:
+    osx_defaults (0.1.2)
+
 DEPENDENCIES
   homebrew (>= 0)
+  osx_defaults (>= 0)
+  rbenv (>= 0)
 
