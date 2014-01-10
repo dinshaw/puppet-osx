@@ -26,6 +26,11 @@ package { 'SublimeText3':
   provider => 'appdmg',
   source   => 'http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%20Build%203059.dmg';
 }
+package { 'Dropbox':
+  provider => 'appdmg',
+  source   => 'https://d1ilhw0800yew8.cloudfront.net/client/Dropbox%202.4.11.dmg'
+
+}
 file { '/usr/local/bin/subl':
     ensure  => link,
     target  => '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl',
