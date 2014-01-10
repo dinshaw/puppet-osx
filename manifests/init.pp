@@ -51,7 +51,8 @@ exec { 'sublime_text_user_dir':
 osx_defaults { 'Put my Dock where i want it':
     key    => 'orientation',
     domain => 'com.apple.dock',
-    value  => 'left',
+    value  => 'right',
+    user => 'dgobhai',
   }
 
 
