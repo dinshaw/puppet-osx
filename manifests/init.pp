@@ -35,16 +35,16 @@ file { '/usr/local/bin/subl':
 
 exec { 'dotfiles':
   creates => '/Users/dgobhai/.dotfiles',
-  command => '/usr/bin/git clone https://github.com/dinshaw/dotfiles.git /Users/dgobhai/.dotfiles && cd /Users/dgobhai/.dotfiles && ./rake install',
+  command => '/usr/bin/git clone https://github.com/dgobhai/dotfiles.git /Users/dgobhai/.dotfiles && cd /Users/dgobhai/.dotfiles && ./rake install',
 }
 
 exec { 'move_sublime_user_dir':
-  command => "/bin/mv '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User' '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User-bak'",
+  command => "/bin/mv '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User' '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User-bak'",
   user => root,
 }
 # exec { 'sublime_text_user_dir':
-#   creates => '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User',
-#   command => "/usr/bin/git clone https://github.com/dinshaw/sublime-user-dir.git '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User'",
+#   creates => '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User',
+#   command => "/usr/bin/git clone https://github.com/dgobhai/sublime-user-dir.git '/Users/dgobhai/Library/Application Support/Sublime Text 3/Packages/User'",
 # }
 
 
