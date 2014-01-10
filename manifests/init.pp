@@ -38,3 +38,10 @@ exec { 'dotfiles':
   creates => '/Users/dgobhai/.dotfiles',
   command => '/usr/bin/git clone https://github.com/dinshaw/dotfiles.git /Users/dgobhai/.dotfiles && cd /Users/dgobhai/.dotfiles && ./rake install',
 }
+
+exec { 'sublime_text_user_dir':
+  creates => '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User',
+  command => "mv '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User' '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User-bak'; /usr/bin/git clone https://github.com/dinshaw/sublime-user-dir.git '/Users/dinshaw/Library/Application Support/Sublime Text 3/Packages/User'",
+}
+
+
