@@ -1,22 +1,22 @@
-class { 'homebrew':
-  user => 'dgobhai',
-}
+# class { 'homebrew':
+#   user => 'dgobhai',
+# }
 
 package { 'gtypist':
   ensure   => installed,
   provider => homebrew,
-  require  => Class['homebrew'],
+  # require  => Class['homebrew'],
 }
 
 package { 'rbenv':
   ensure   => installed,
   provider => homebrew,
-  require  => Class['homebrew'],
+  # require  => Class['homebrew'],
 } ->
 package { 'ruby-build':
   ensure   => installed,
   provider => homebrew,
-  require  => Class['homebrew'],
+  # require  => Class['homebrew'],
 }
 # exec { '2.0.0-p247':
 #   command => '/usr/local/bin/rbenv install 2.0.0-p247',
