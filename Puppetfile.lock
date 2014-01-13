@@ -6,11 +6,11 @@ GIT
     rbenv (1.2.0)
 
 GIT
-  remote: https://github.com/bjoernalbers/puppet-homebrew.git
+  remote: https://github.com/jedi4ever/puppet-homebrew.git
   ref: master
-  sha: f0dc376bc203f4aee89715d60d2671e882e03f7a
+  sha: cc2a3d1578b3d951c849671f0c4e45288d436a94
   specs:
-    homebrew (0.2.0)
+    homebrew (0.0.1)
 
 GIT
   remote: https://github.com/wfarr/puppet-osx_defaults.git

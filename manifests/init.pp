@@ -3,19 +3,19 @@ class { 'homebrew':
 }
 
 package { 'gtypist':
-  ensure   => present,
-  provider => brew,
+  ensure   => installed,
+  provider => homebrew,
   require  => Class['homebrew'],
 }
 
 package { 'rbenv':
   ensure   => installed,
-  provider => brew,
+  provider => homebrew,
   require  => Class['homebrew'],
 } ->
 package { 'ruby-build':
   ensure   => installed,
-  provider => brew,
+  provider => homebrew,
   require  => Class['homebrew'],
 }
 # exec { '2.0.0-p247':
@@ -29,8 +29,8 @@ package { 'SublimeText3':
 package { 'Dropbox':
   provider => 'appdmg',
   source   => 'https://d1ilhw0800yew8.cloudfront.net/client/Dropbox%202.4.11.dmg'
-
 }
+
 file { '/usr/local/bin/subl':
     ensure  => link,
     target  => '/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl',
@@ -68,5 +68,4 @@ osx_defaults { 'Show no crap in the dock':
 exec { 'refresh dock':
   command => '/usr/bin/killall Dock'
 }
-
 
