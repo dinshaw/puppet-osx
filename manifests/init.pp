@@ -5,22 +5,21 @@
 package { 'gtypist':
   ensure   => installed,
   provider => homebrew,
-  # require  => Class['homebrew'],
+}
+package { 'redis':
+  ensure   => installed,
+  provider => homebrew,
 }
 
 package { 'rbenv':
   ensure   => installed,
   provider => homebrew,
-  # require  => Class['homebrew'],
 } ->
+
 package { 'ruby-build':
   ensure   => installed,
   provider => homebrew,
-  # require  => Class['homebrew'],
 }
-# exec { '2.0.0-p247':
-#   command => '/usr/local/bin/rbenv install 2.0.0-p247',
-# }
 
 package { 'SublimeText3':
   provider => 'appdmg',
